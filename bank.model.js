@@ -28,4 +28,4 @@ var BankSchema = new Schema({
   ]
 });
 
-module.exports=mongoose.model('BankModelSchema',BankSchema);
+module.exports=mongoose.model('Bank',BankSchema);

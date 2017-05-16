@@ -1,0 +1,21 @@
+db.bankData.insert{
+	"banktype": "saving account",
+	"bankname": "union bank",
+	"branchName": "Ghodbuner Road",
+  "codes":{
+    "micr": "123",
+    "swift": "123",
+    "sort": "123",
+    "ifsc": "123"
+  },
+  "createdOn": "2016-05-18",
+  "lastUpdatedOn": "2016-05-25",
+  "status": "Submitted",
+  "account": [
+      "sapRefNumber": "123",
+      "type": "current",
+      "accNumber": "12345678910",
+      "status": "Approved",
+      "currency": "USR"
+  ]
+}

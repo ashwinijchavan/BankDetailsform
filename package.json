@@ -1,17 +1,28 @@
 {
-  "name": "finalproject",
+  "name": "cnkmdm",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"# BankDetailsform\"",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "mongoose": "^4.9.9",
-    "nodemon": "^1.11.0"
-  }
+    "nodemon": "^1.11.0",
+    "save": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashwinijchavan/BankDetailsform.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashwinijchavan/BankDetailsform/issues"
+  },
+  "homepage": "https://github.com/ashwinijchavan/BankDetailsform#readme"
 }

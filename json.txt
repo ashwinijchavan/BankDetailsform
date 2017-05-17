@@ -5,7 +5,7 @@ db.bankData.insert({
     "micr": "123",
     "swift": "123",
     "sort": "123",
-    "ifsc": "123"
+    "ifsc": "123",
   "createdOn": "2016-05-18",
   "lastUpdatedOn": "2016-05-25",
   "status": "Submitted",

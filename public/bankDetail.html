@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container-fluid">
+    <div class="row headerImg">
+    <img src="img/img2.jpg" class="img-responsive" alt="Bank detail header image">
+  </div>
+    
+      <div class="row">
+        <div class="col-sm-12 col-md-12 sidebar">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Bank Type</th>
+                  <th>Bank Name</th>
+                  <th>Branch Name</th>
+                  <th>MICR Code</th>
+                  <th>SWIFT Code</th>
+                  <th>SORT Code</th>
+                  <th>IFSC Code</th>
+                  <th>Created On</th>
+                  <th>Last Updated On</th>
+                  <th>Status</th>
+                  <th>Sap Reference Number</th>
+                  <th>Account Type</th>
+                  <th>Account Number</th>
+                  <th>Currency</th>
+                  <th>Account Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="bankInfo in bank">
+                  <td>{{ bankInfo.bankType }}</td>
+                  <td>{{ bankInfo.bankName }}</td>
+                  <td>{{ bankInfo.branchName }}</td>
+                  <td>{{ bankInfo.micr }}</td>
+                  <td>{{ bankInfo.swift }}</td>
+                  <td>{{ bankInfo.sort }}</td>
+                  <td>{{ bankInfo.ifsc }}</td>
+                  <td>{{ bankInfo.example1 }}</td>
+                  <td>{{ bankInfo.example2 }}</td>
+                  <td>{{ bankInfo.status1 }}</td>
+                  <td>{{ bankInfo.sapRefNo }}</td>
+                  <td>{{ bankInfo.AccType }}</td>
+                  <td>{{ bankInfo.accNum }}</td>
+                  <td>{{ bankInfo.currency }}</td>
+                  <td>{{ bankInfo.status2 }}</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                  <td>ante</td>
+                  <td>1,004</td>
+                  <td>dapibus</td>
+                  <td>diam</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

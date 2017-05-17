@@ -2,30 +2,35 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var BankSchema = new Schema({
-	banktype: { type : String},
-	bankname: { type : String},
-	branchName: { type : String},
-  codes:{
+  banktype: { type : String},
+  bankname: { type : String},
+  branchName: { type : String},
+  
     micr: { type : String},
     swift: { type : String},
     sort: { type : String},
-    ifsc: { type : String}
+    ifsc: { type : String},
+  created_at: {type: Date, default: Date.now},
+  updated_at: {type: Date, default: Date.now},
+  status: {
+    type: String, 
+    enum: ["Draft", "Submitted", "Approved", "Rejected"]
   },
-  createdOn: {type: Date},
-  lastUpdatedOn: {type: Date},
-  status: {type: String, enum: ["Draft", "Submitted", "Approved", "Rejected"], required: true},
-  account: [
-    {
-      sapRefNumber: {type: Number},
-      type: {type: String},
-      accNumber: {type: Number},
-      status: {type: String, enum: ["Draft", "Submitted", "Approved", "Rejected"], required: true},
-      currency: {
+  sapRefNumber: {type: Number},
+  type: {type: String},
+  accNumber: {type: Number},
+
+  currency: {
         type: String,
         enum: ["INR", "USR", "EUR", "GBP", "SGD", "AUD"]
       }
-    }
-  ]
-});
+    });
+var Bank=module.exports=mongoose.model('BankData',BankSchema);
 
-module.exports=mongoose.model('Bank',BankSchema);
+module.exports.getData=function(callback, limit){
+  Bank.find(callback).limit(limit);
+}
+//Create Rounds
+module.exports.addBank=function(bank, callback){
+  Bank.create(bank, callback);
+}

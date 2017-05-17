@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>bank details</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bank.css">
+	<link rel="stylesheet" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+	<style>
+		.table>tbody>tr>td{
+			border-top: 0px solid #ddd !important;
+		}
+		.table-responsive{
+			overflow-x: visible !important;
+		}
+	</style>
+</head>
+<body class="">
+	<div class="container">
+		<div class="row headerImg">
+			<img src="img/imgH.jpg" class="img-responsive" alt="Bank detail header image">
+		</div>
+
+		<form action="bankDetail.html" method="" ng-controller="myCtrl">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="table-responsive">
+						<table class="table table-hover">
+							<tbody>
+								<tr>
+									<td>
+										<label for="bankType">Bank Type</label>
+									</td>
+									<td>
+										<div class="form-group">
+											<input type="text" class="form-control" ng-model="bankInfo.bankType" id="bankType">
+										</div>
+									</td>
+									<td>
+										<label for="bankName">Bank Name</label>
+									</td>
+									<td>
+										<div class="form-group">
+											<input type="text" class="form-control" ng-model="bankInfo.bankName" id="bankName">
+										</div>
+									</td>
+									<td>
+										<label for="branchName">Branch Name</label>
+
+									</td>
+									<td>
+										<div class="form-group">
+											<input type="text" class="form-control" ng-model="bankInfo.branchName" id="branchName">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label for="micr">MICR Code</label>
+
+									</td>
+									<td>
+										<div class="form-group">
+											<input type="number" class="form-control" ng-model="bankInfo.micr" id="micr">
+										</div>
+									</td>
+									<td>
+										<label for="swift">SWIFT Code</label>
+									</td>
+									<td>
+										<div class="form-group">
+											<input type="number" class="form-control" ng-model="bankInfo.swift" id="swift">
+										</div>										
+									</td>
+									<td>
+										<label for="sort">SORT Code</label>
+									</td>
+									<td>
+										<div class="form-group">
+											<input type="number" class="form-control" ng-model="bankInfo.sort" id="sort">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label for="ifsc">IFSC Code</label>
+									</td>
+									<td>
+										<div class="form-group">
+											<input type="number" class="form-control" ng-model="bankInfo.ifsc" id="ifsc">
+										</div>
+									</td>
+									<td>
+										<label for="InputEmail">Created On</label>
+
+									</td>
+									<td>
+										<div class="form-group hero-unit">
+											<input  type="date" placeholder="Enter Date" class="form-control" id="example1" ng-model="bankInfo.example1" >
+										</div>	
+									</td>
+									<td>
+										<label for="InputEmail">Last Updated On</label>
+									</td>
+									<td>
+										<div class="form-group hero-unit">
+											<input  type="date" placeholder="Enter Date" class="form-control" id="example2" ng-model="bankInfo.example2" >
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label for="status1">Status</label>
+									</td>
+									<td>
+										<select class="form-control selectpicker" name="status1" ng-model="bankInfo.status1" style="width:150px;">
+											<option value="select">Select</option>
+											<option value="Draft">Draft</option>
+											<option value="Submitted">Submitted</option>
+											<option value="Approved">Approved</option>
+											<option value="Rejected">Rejected</option>
+										</select>
+									</td>
+									<td>
+										<label for="InputEmail">Sap Reference Number</label>
+
+									</td>
+									<td>
+										<div class="form-group">
+											<input type="text" class="form-control" ng-model="bankInfo.sapRefNo" id="sapRefNo">
+										</div>
+									</td>
+									<td>
+										<label for="type">Account Type</label>
+
+									</td>
+									<td>
+										<div class="form-group">
+											<input type="text" class="form-control" ng-model="bankInfo.AccType" id="AccType">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label for="InputEmail">Account Number</label>
+
+									</td>
+									<td>
+										<div class="form-group">
+											<input type="number" class="form-control" ng-model="bankInfo.accNum" id="accNum">
+										</div>
+									</td>
+									<td>
+										<label for="currency">Currency</label>
+
+									</td>
+									<td>
+										<select class="form-control selectpicker" name="currency" ng-model="bankInfo.currency" id="currency" style="width:150px;">
+											<option value="select">Select</option>
+											<option value="INR">INR</option>
+											<option value="USR">USR</option>
+											<option value="EUR">EUR</option>
+											<option value="GBP">GBP</option>
+											<option value="SGD">SGD</option>
+											<option value="AUD">AUD</option>
+										</select>										
+									</td>
+									<td>
+										<label for="status2">Status</label>
+
+									</td>
+									<td>
+										<select class="form-control selectpicker" name="status2" ng-model="bankInfo.status2" id="status2" style="width:150px;">
+											<option value="select">Select</option>
+											<option value="Draft">Draft</option>
+											<option value="Submitted">Submitted</option>
+											<option value="Approved">Approved</option>
+											<option value="Rejected">Rejected</option>
+										</select>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+		</div>
+		<div class="row" align="center">
+			<input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info float-xs-right">
+		</div>
+
+	</form>
+
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script>
+            // When the document is ready
+            $(document).ready(function () {
+
+            	$('#example1').datepicker({
+            		format: "dd/mm/yyyy"
+            	});  
+            	$('#example2').datepicker({
+            		format: "dd/mm/yyyy"
+            	}); 
+            });
+</script>
+<script src="js/bootstrap-select.min.js"></script>
+
+    </body>
+    </html>
